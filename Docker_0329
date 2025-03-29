@@ -1,0 +1,182 @@
+### Docker Commands ####
+
+sudo dnf -y install dnf-plugins-core
+    7  sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+    8  sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+    9  service docker start
+   10  docker --version
+   11  clear
+   12  docker images
+   13  docker ps -a
+   14  docker run nginx
+   15  docker ps -a
+   16  docker run nginx
+   17  docker ps -a
+   18  docker images
+   19  clear
+   20  docker run -itd nginx
+   21  docker ps -a
+   22  clear
+   23  docker ps
+   24  docker ps -a
+   25  cat /etc/os-release 
+   26  docker run -it ubuntu
+   27  docker ps -a
+   28  docker run -it ubuntu
+   29  docker ps -a
+   30  clear
+   31  docker ps
+   32  docker run -it --name aman ubuntu
+   33  docker ps
+   34  docker rename 8153972c6bc4 aman
+   35  docker rename 8153972c6bc4 amit
+   36  docker ps
+   37  clear
+   38  docker ps
+   39  docker exec -it 6e9666e77daf /bin/bash
+   40  docker ps
+   41  docker ps -a
+   42  docker exec -it 0185eb30fbe7 /bin/bash
+   43  docker start 0185eb30fbe7
+   44  docker ps -a
+   45  docker run -it --name edureka httpd
+   46  docker ps -a
+   47  docker exec -it 0185eb30fbe7 /bin/sh
+   48  clear
+   49  docker ps -a
+   50  docker stop 546d61d857b3
+   51  docker ps -a
+   52  docker ps -a
+   53  docker rm e4e21a44a080
+   54  docker rm 546d61d857b3
+   55  clear
+   56  docker ps -a
+   57  docker ps -a -q
+   58  docker stop $(docker ps -a -q)
+   59  docker ps -a
+   60  docker rm $(docker ps -a -q)
+   61  docker ps -a
+   62  docker run -itd nginx
+   63  docker run -itd httpd
+   64  docker run -itd nginx
+   65  docker ps -a
+   66  docker stop f6a5d67c4e06
+   67  docker ps -a
+   68  docker rm $
+   69  docker rm $(docker ps -a -q)
+   70  docker ps -a
+   71  docker stop 67e7f069ef01
+   72  docker ps -a
+   73  docker container prune
+   74  docker ps -a
+   75  docker ps -a
+   76  docker ps -a -q
+   77  docker container prune
+   78  clear
+   79  docker ps
+   80  docker inspect 16d6ade3da2b
+   81  hostname -i
+   82  docker ps -a
+   83  docker logs ˇ
+   84  docker logs 16d6ade3da2b
+   85  docker logs -f 16d6ade3da2b
+   86  docker logs 16d6ade3da2b -f
+   87  docker top 16d6ade3da2b
+   88  docker run -itd nginx
+   89  docker run -itd httpd
+   90  docker ps
+   91  docker stats
+   92  free -m
+   93  docker stats
+   94  docker ps -a
+   95  docker inspect 2f17fc5c3c99
+   96  docker run -itd -P nginx
+   97  docker ps
+   98  curl ifconfig.co
+   99  docker run -itd -p 81:80 nginx
+  100  docker ps -a
+  101  docker run -itd -p 81:80 82:80 nginx
+  102  clear
+  103  docker ps
+  104  service docker restart
+  105  docker ps -a
+  106  docker start $(docker ps -a -q)
+  107  docker run -itd --restart always nginx
+  108  docker ps -a
+  109  service docker restart
+  110  docker ps -a
+  111  docker stop f04d222c8507
+  112  docker ps -a
+  113  docker ps -a
+  114  docker ps -a
+  115  docker ps -a
+  116  docker ps -a
+  117  docker ps -a
+  118  docker start f04d222c8507
+  119  clear
+  120  docker ps -a
+  121  docker restart $
+  122  docker restart $(docker ps -a -q
+  123  docker restart $(docker ps -a -q)
+  124  docker inspect f04d222c8507
+  125  docker inspect f04d222c8507 grep -i restart
+  126  docker inspect f04d222c8507|  grep -i restart
+  127  docker inspect f04d222c8507|  grep -i restartpolicy
+  128  docker run -itd -p 84:80 httpd
+  129  cd /tmp
+  130  ls -lrt
+  131  vi Dockerfile
+  132  docker ps -a
+  133  docker inspect f04d222c8507
+  134  vi Dockerfile 
+  135  docker build -t fawaz .
+  136  docker images
+  137  docker inspect fawaz
+  138  docker images
+  139  docker run -itd -P fawaz
+  140  docker ps -a
+  141  service docker restart
+  142  docker images
+  143  vi sanindhya
+  144  vi index.html
+  145  ls -lrt
+  146  docker build -t gobinath -f sanindhya .
+  147  docker images
+  148  docker run -itd -P gobinath
+  149  docker ps -a
+  150  docker push devopstrainer1/0329:tagname
+  151  clear
+  152  docker images
+  153  docker push devopstrainer1/0329:tagname
+  154  docker tag gobinath devopstrainer1/0329:gobinath
+  155  docker images
+  156  docker push devopstrainer1/0329:gobinath
+  157  docker login
+  158  docker push devopstrainer1/0329:gobinath
+  159  docker pull splunk/splunk
+  160  docker images
+  161  docker ps -a
+  162  docker image prune
+  163  docker images -f "dangling=true"
+  164  docker image prune -a
+  165  docker images
+  166  docker save gobinath -o amit.tar
+  167  ls -lrt
+  168  docker rmi gobinath
+  169  docker ps -a
+  170  docker stop 394522c636a5
+  171  docker rmi gobinath
+  172  docker rm 394522c636a5
+  173  docker rmi gobinath
+  174  docker ps -a
+  175  ls -lrt
+  176  docker load < amit.tar 
+  177  ls -lrt
+  178  docker images
+  179  docker save fawaz -o edureka.tar
+  180  docker load < edureka.tar 
+  181  docker images
+  182  clear
+  183  docker images
+  184  docker tag fawaz devopstrainer1/0329:fawaz
+  185  docker push devopstrainer1/0329:fawaz
