@@ -1,0 +1,42 @@
+(concrete-bloom-206520)$ cat a.yml 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: abc2
+  namespace: saloni
+  labels:
+    name: edureka
+spec:
+  containers:
+    - name: amit
+      image: httpd
+      resources:
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
+        requests:
+          memory: "64Mi"
+          cpu: "250m"
+(concrete-bloom-206520)$ cat b.yml 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: abc123
+  namespace: default
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: amit
+          image: nginx
+          ports:
+            - containerPort: 80
