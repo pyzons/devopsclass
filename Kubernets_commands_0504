@@ -1,0 +1,87 @@
+kubectl get pods
+  479  vi a.yml
+  480  cat a.yml 
+  481  kubectl apply -f a.yml 
+  482  kubectl get pods
+  483  kubectl get nodes
+  484  kubectl get pods
+  485  kubectl get nodes
+  486  kubectl describe pod abc1
+  487  kubectl get pods
+  488  kubectl get pods -o wide
+  489  kubectl describe pod abc1
+  490  kubectl exec -it abc1 -- bash
+  491  kubectl exec -it abc1 -c amit1 -- bash
+  492  kubectl exec -it abc1 -c amit -- bash
+  493  kubectl exec -it abc1 -c amit1 -- bash
+  494  kubectl get pods
+  495  kubectl describe pod abc1
+  496  kubectl get pods
+  497  kubectl delete pod abc1
+  498  kubectl
+  499  vi a.yml 
+  500  kubectl apply -f a.yml 
+  501  kubectl get pods
+  502  kubectl get pods --show-labels
+  503  vi a.yml 
+  504  kubectl apply -f a.yml 
+  505  kubectl delete pod abc
+  506  kubectl get pods -o wide
+  507  kubectl get pods --show-labels
+  508  kubectl get pods -l name=amit
+  509  kubectl get pods -l name=am
+  510  kubectl get pods -l app=myapp
+  511  clear
+  512  kubectl get pods
+  513  kubectl get namespaces
+  514  kubectl get pods --all-namespace
+  515  kubectl get pods --all-namespaces
+  516  kubectl create namespace saloni
+  517  kubectl get namespaces
+  518  kubectl get pods
+  519  vi a.yml 
+  520  kubectl apply -f a.yml 
+  521  cat a.yml 
+  522  kubectl get pods
+  523  kubectl get pods --namespace saloni
+  524  vi a.yml 
+  525  kubectl apply -f a.yml 
+  526  kubectl delete pod abc2 --namespace saloni
+  527  kubectl apply -f a.yml 
+  528  kubetl get pods --namespace saloni
+  529  kubectl get pods --namespace saloni
+  530  kubectl describe piod abc2
+  531  kubectl describe pod abc2
+  532  kubectl describe pod abc2 --namespace saloni
+  533  kubectl top pod abc2 --namespace saloni
+  534  clear
+  535  kubectl get pods
+  536  kubectl delete pod abc1
+  537  kubectl delete pod abc2
+  538  vi b.yml
+  539  cat b.yml 
+  540  kubectl apply -f b.yml 
+  541  kubectl get all
+  542  clear
+  543  kubectl get deployment
+  544  kubectl get all
+  545  cat b.yml 
+  546  kubectl get pods
+  547  kubectl delete pod abc123-59db86b45c-2m7rw
+  548  kubectl get pods
+  549  kubectl get all
+  550  kubectl scale deployment mydeployment --replicas=5
+  551  kubectl scale deployment abc123 --replicas=5
+  552  kubectl get all
+  553  kubectl scale deployment mydeployment --replicas=2
+  554  kubectl get all
+  555  kubectl scale deployment abc123 --replicas=2
+  556  kubectl get all
+  557  kubectl describe deployment abc123
+  558  kubectl set image deployment abc123 amit=httpd
+  559  kubectl describe deployment abc123
+  560  kubectl get all
+  561  kubectl rollout history deployment abc123
+  562  kubectl rollout undo deployment abc123 --to-revision=1
+  563  kubectl describe deployment abc123
+  564  kubectl rollout history deployment abc123
